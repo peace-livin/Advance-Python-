@@ -26,7 +26,7 @@ import random
 # print(random.choice(fruits))
 
 
-# Q1). generate  wap to generated 4 digit otp and number having space
+# Q1). wap to generated 4 digit otp and number having space
 
 
 for j in range(4):
