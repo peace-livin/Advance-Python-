@@ -57,13 +57,66 @@
 
 # inshot form  **first text in files and second text in files and then write all data in file f4**
 
-f1=open("f1.txt","w")
-f2=open("f2.txt","w")
-f3=open("f3.txt","w")
-f3.write(f1.read())
-f3.write(f2.read())
-f1.close()
-f2.close()
-f3.close()
+# f1=open("f1.txt","w")
+# f2=open("f2.txt","w")
+# f3=open("f3.txt","w")
+# f3.write(f1.read())
+# f3.write(f2.read())
+# f1.close()
+# f2.close()
+# f3.close()
 
+# print('data into files ')
+
+
+# tell : it will return curent position of file pointer
+# f=open("f1.txt","r")
+# print('file pointer location :',f.tell())
+# print(f.read(2))
+# print('file pointer location :',f.tell())
+# print(f.read(4))
+# print('file pointer location :',f.tell())
+# f.seek(12) # move pointer to 12th position
+# print(f.read(4))
+
+
+# q2). create txt file f5.txt and change last name ..smart! to ..stupid!
+
+# f=open("f5.txt","w")
+# f.write("All students are stupid")
+# f.seek(17)
+# f.write("smart!")
+# f.close()
+
+
+import csv
+# # working with csv (comma separated values) files
+
+# f=open("product.csv","w")
+# # To write data inside csv file we can  create csv writer 
+# csv_writer=csv.writer(f) 
+# csv_writer.writerow(["name","age","gender"])
+# csv_writer.writerow(["akshay","25","male"])
+# f.close()
+# print('data into files ')
+
+
+# q4.) use input 3 time pid ,pname, price ,quantity how many produncts you want to save csv file
+f=open("product.csv","w")
+csv_writer=csv.writer(f)
+csv_writer.writerow(["pid","pname","price","quantity"])
+
+pid=101
+ak=int(input("how many products you want to save: "))
+for i in range(ak):
+    pid=int(input("enter product id:"))
+    pname=input("enter product name:")
+    price=int(input("enter product price:"))
+    quantity=int(input("enter product quantity:"))
+    
+    csv_writer.writerow([pid,pname,price,quantity])
+   
+    pid=pid+1
+f.close()
+    
 print('data into files ')
