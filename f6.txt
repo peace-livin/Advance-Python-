@@ -1,0 +1,5 @@
+Apple is fruit 
+Banana is fruit
+Cat is animal
+Ball is football
+Animal is beutifull

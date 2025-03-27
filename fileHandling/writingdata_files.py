@@ -102,21 +102,84 @@ import csv
 
 
 # q4.) use input 3 time pid ,pname, price ,quantity how many produncts you want to save csv file
-f=open("product.csv","w")
-csv_writer=csv.writer(f)
-csv_writer.writerow(["pid","pname","price","quantity"])
+# f=open("product.csv","w")
+# csv_writer=csv.writer(f)
+# csv_writer.writerow(["pid","pname","price","quantity"])
 
-pid=101
-ak=int(input("how many products you want to save: "))
-for i in range(ak):
-    pid=int(input("enter product id:"))
-    pname=input("enter product name:")
-    price=int(input("enter product price:"))
-    quantity=int(input("enter product quantity:"))
+# pid=101
+# ak=int(input("how many products you want to save: "))
+# for i in range(ak):
+#     pid=int(input("enter product id:"))
+#     pname=input("enter product name:")
+#     price=int(input("enter product price:"))
+#     quantity=int(input("enter product quantity:"))
     
-    csv_writer.writerow([pid,pname,price,quantity])
+#     csv_writer.writerow([pid,pname,price,quantity])
    
-    pid=pid+1
-f.close()
+#     pid=pid+1
+# f.close()
     
-print('data into files ')
+# print('data into files ')
+
+
+
+
+# reader #
+
+import csv
+# # f=open("product.csv","r") # To read data inside csv file we can  create csv reader
+# # data=csv.reader(f)
+# # for row in data:
+# #     for record in row:
+# #         print(record,end=" ") # end is used to print space after each record
+# #     print()
+    
+# #* working with binary files: image ,pdf, audio,video*
+
+# f=open("/workspaces/Advance-Python-/fileHandling/supercar.jpg","rb") # open binary file
+# f2=open('mysupercar.jpg','wb') # open binary file
+# f2.write(f.read()) # write 100 bytes
+# print('data into files ')
+
+
+# without with statement
+
+# f=open("f1.txt","r+")
+# print(f.read())
+# f.write("\n this is new data " )
+# print("kya ye file closed hai:",f.closed)
+# f.close()
+# print("kya ye file closed hai:",f.closed)
+
+
+#with statement
+
+# #is we open file in with statement then it will automatically close the file
+# with open("f1.txt","r+") as f:
+#     print(f.read())
+#     f.write("\n hello akshay " )
+#     print("kya ye file closed hai:",f.closed)
+# print("kya ye file closed hai:",f.closed)
+
+
+# q3.) create file f6.txt and read data from file f6.txt and line state with A is 2 and B is 3 and C is 
+
+f=open("f6.txt","r")
+data=f.read()
+print(f.readlines)
+a_count=0
+b_count=0
+c_count=0
+for line in data :
+    if line.startswith("A"):
+        a_count=a_count+1
+    elif line.startswith("B"):
+        b_count=b_count+1
+    elif line.startswith("C"):
+        c_count=c_count+1
+        
+print("line start with A is ",a_count)
+print("line start with B is ",b_count)
+print("line start with C is ",c_count)
+
+
