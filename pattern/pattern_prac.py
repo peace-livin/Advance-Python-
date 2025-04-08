@@ -120,19 +120,19 @@
 #   a  a
 # a  a   a. make this pattern
 
-def print_pattern(n):
-    for i in range(1, n+1):
-        # Print leading spaces
-        print(" " * (n - i), end="")
+# def print_pattern(n):
+#     for i in range(1, n+1):
+#         # Print leading spaces
+#         print(" " * (n - i), end="")
         
-        # Print the 'a' characters with spaces in between
-        for j in range(1, i + 1):
-            print("a", end=" ")
+#         # Print the 'a' characters with spaces in between
+#         for j in range(1, i + 1):
+#             print("a", end=" ")
         
-        # Move to the next line
-        print()
+#         # Move to the next line
+#         print()
 
-# Specify the number of rows
-n = 3
-print_pattern(n)
+# # Specify the number of rows
+# n = 3
+# print_pattern(n)
 
