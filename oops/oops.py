@@ -73,17 +73,28 @@
  
 #pin change exmple 
 
-class Account:
-    def __init__(self):
-        self.__pin=4444
+# class Account:
+#     def __init__(self):
+#         self.__pin=4444
         
-    def setPin(self,pin):
-        self.__pin=pin
+#     def setPin(self,pin):
+#         self.__pin=pin
     
-    def getPin(self):
-        return self.__pin
+#     def getPin(self):
+#         return self.__pin
     
-a=Account()
-a.setPin(1234)
-print(a.getPin())
+# a=Account()
+# a.setPin(1234)
+# print(a.getPin())
     
+###### method default argument
+
+class Test:
+    def m1(self,a=0,b=10,c=0):
+        print("m1() called")
+        
+t=Test()
+t.m1()
+t.m1(1)
+t.m1(1,2)
+t.m1(1,2,3)
