@@ -8,7 +8,7 @@ from abc import ABC,abstractmethod
 #ABC is a class which is present inside abc module
 #abstract method is a method which is present inside abc module
 #abstract method is a method which is present inside abc module
-from abc import *
+from abc import * 
 # class Test(ABC):
 #     def m1(self):
 #         print("m1()")
