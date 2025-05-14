@@ -121,7 +121,7 @@ import re
 # Q2).mahrashtra number plate pattern 
 
 import re
-pattern= "[H-M]{2}[0-5]{2}[A-Z]{1}[0-9]{4}"
+pattern= "[M][H][0][0-5][A-Z][A-Z][0-9]{4}"
 plate=input("Enter the plate number:")
 m=re.fullmatch(pattern,plate)
 if m!=None:
